@@ -1,0 +1,688 @@
+/* Resetting margin and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+  background-color: #232935;
+  scroll-behavior: smooth;
+}
+
+footer {
+  background-color: #232935;
+  padding: 40px 20px;
+  color: #ccc;
+}
+
+/* Container for proper alignment and spacing */
+.container {
+  width: 77%; /* Adjusted to match the second image */
+  margin: 0 auto;
+}
+
+.dropbtn-new {
+  color: white;
+  padding: 10px 16px;
+  font-size: 16px;
+  border: none;
+  background-color: #2F3542;
+  cursor: pointer;
+}
+
+.main-header .username-highlight {
+  color: #ffffff; /* Your desired color */
+  font-weight: bold; /* Optional */
+  font-size: 18px;
+}
+
+
+.username-highlight {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.username-highlight span{
+  color: white; 
+}
+
+.username-highlight:hover {
+  color: #E74C3C; /* Changes color to red on hover */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Darker shadow on hover */
+}
+
+.dropdown-new {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content-new {
+  display: none;
+  position: absolute;
+  background-color: #232935;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content-new a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: flex; /* Keeps the icon aligned with the text */
+  align-items: center; /* Vertically centers the icon */
+}
+
+.dropdown-content-new a i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.dropdown-content-new a:hover {
+  background-color: #232935;
+}
+
+.dropdown-new:hover .dropdown-content-new {
+  display: block;
+}
+
+/* Top Bar Styling */
+.top-bar {
+  background-color: #232935; /* Exact darker shade */
+  padding: 8px 0;
+  font-size: 14px;
+  color: #fff;
+}
+
+.top-bar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-links a, .right-links a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Transition for color change */
+}
+
+.left-links a {
+  margin-right: 15px;
+}
+
+.left-links i {
+  margin-left: 0;
+}
+.right-links i {
+  margin-left: 15px;
+}
+
+.right-links {
+  display: flex;
+}
+
+.right-links span {
+  margin-left: 15px;
+}
+
+.right-links a {
+  margin-left: 15px;
+}
+
+/* Main Header Styling */
+.main-header {
+  background-color: #2F3542; /* Darker, as seen in the second image */
+  padding: 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for separation */
+}
+
+.main-header-content {
+  display: flex;
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center;
+  padding: 15px 0; /* Adjusts padding for top and bottom */
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+
+.logo-image {
+  width: 40px; /* Adjust the size of the logo as needed */
+  height: auto;
+  margin-right: 10px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+
+.circle {
+  width: 45px;
+  height: 45px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.brand-name {
+  color: #fff;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.2; /* Adjust for spacing between the two lines */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  flex: 1; /* Takes up available space */
+  margin-right: 300px;
+}
+
+.nav-links a {
+  color: #fff;
+  margin: 0 25px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.auth-links {
+  display: flex; /* Using flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: flex-start; /* Align items at the top */
+  color: #fff; /* White text color for visibility */
+}
+
+
+
+.auth-links a {
+  color: #fff; /* Color for visibility */
+  text-decoration: none; /* No underline */
+  font-size: 16px; /* Font size */
+  transition: color 0.3s ease; /* Transition for hover effect */
+  
+}
+
+.auth-links span {
+  color: #3b3974; /* Color for the 'or' text */
+  font-size: 15px; /* Font size for the 'or' text */
+}
+
+/* Dropdowns on the Left */
+.dropdowns {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  gap: 10px; /* Spacing between the two dropdowns */
+}
+
+.dropdown {
+  padding: 10px;
+  background-color: #232935;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Transition for background change */
+}
+
+
+
+.dropdown option {
+  color: #232935;
+}
+
+/* Search Section and Icons */
+.search-section {
+  display: flex;
+  justify-content: center; /* Center the entire search section */
+  align-items: center;
+  padding: 15px;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* General Styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: #232935; /* Retaining the original dark background */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  
+  font-family: 'Raleway', sans-serif;
+  transition: background-color 0.3s ease; /* Transition for background change */
+}
+
+.dropdown-content {
+  font-family: 'Raleway', sans-serif;
+  display: none; /* Initially hide the dropdown */
+  position: absolute;
+  background-color: #232935; /* Background color of the dropdown */
+  min-width: 200px; /* Set a minimum width for the dropdown */
+  z-index: 1; /* Ensure it sits on top of other elements */
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Shadow effect */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Submenu styling */
+.submenu a {
+  font-family: 'Raleway', sans-serif;
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+
+/* Mega Menu Styles */
+.submenu .mega-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%; /* Aligns mega menu to the right of the submenu */
+  background-color: #232935; /* Background color for the mega menu */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  padding: 20px;
+  width: 700px; /* Set width for the mega menu */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.submenu:hover .mega-menu {
+  display: flex; /* Show mega menu on hover */
+}
+
+/* Mega Columns Styling */
+.mega-column {
+  flex: 1; /* Each column takes equal space */
+  padding: 10px; /* Padding within each column */
+}
+
+/* Category Heading Styling */
+.category-heading {
+  font-size: 16px; /* Slightly larger font size for headings */
+  font-weight: bold; /* Bold text for emphasis */
+  color: red; /* Red color for headings */
+  margin-bottom: 10px; /* Space below the heading */
+}
+
+/* Link Styling */
+.mega-column a {
+  display: block; /* Make each link a block element */
+  padding: 8px 20px; /* Adjusted padding for better alignment */
+  font-size: 14px; /* Font size for links */
+  color: #555; /* Dark gray color for links */
+  text-decoration: none; /* Remove underline from links */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transition for hover effect */
+}
+
+.mega-column li {
+  list-style: none;
+}
+
+/* Link hover effect */
+.mega-column a:hover {
+  background-color: rgba(255, 0, 0, 0.3); /* Background change on hover */
+  color: #1bcc24; /* Change text color on hover */
+}
+
+/* Styling for links in another category on hover */
+.category-heading:hover ~ .mega-column a {
+  background-color: rgba(0, 128, 0, 0.1); /* Change background on hover */
+  color: #EA1135; /* Change text color on hover */
+}
+
+/* Optionally, you can create a specific class for active links */
+.mega-column a.active {
+  background-color: rgba(255, 0, 0, 0.3); /* Active state background */
+  color: white; /* Active state color */
+}
+
+/* Adding hover effect for links in another category */
+.submenu:hover ~ .mega-column a {
+  background-color: rgba(0, 0, 0, 0.3); /* Change background when hovering over the submenu */
+  color: #fff; /* Change text color */
+}
+
+/* Search Bar in the Center */
+.search-bar {
+  flex-grow: 1;
+  margin: 5px 20px; /* Space between dropdowns and icons */
+  display: flex;
+  align-items: center;
+  background-color: #31363F;
+  border-radius: 10px;
+  padding-left: 15px; /* Padding to give space for the icon on the left */
+  max-width: 800px; /* Limit the search bar width */
+}
+
+.search-bar input[type="text"] {
+  border: none;
+  background: none;
+  font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+  padding: 14px;
+  flex-grow: 1;
+  outline: none;
+  font-size: 13px;
+  background-color: #31363F;
+  border-radius: 0 20px 20px 0;
+  width: 80%; 
+  color: #fff;
+  transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+.search-bar input[type="text"]:focus {
+  background-color: #444; /* Change background on focus */
+}
+
+.search-bar i {
+  font-size: 18px;
+  color: #bbb; 
+  padding-right: 10px; /* Space between icon and input */
+}
+
+.search-bar input::placeholder {
+  color: #bbb; 
+}
+
+/* Icons on the Right */
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons i {
+  color: #EA1135; 
+  margin-left: 20px;
+  font-size: 18px;
+  transition: color 0.3s ease; /* Transition for hover effect */
+}
+
+.icons i:hover {
+  color: #fff; /* Change color on hover */
+}
+
+/* Hover Effects for Links */
+.nav-links a:hover, .auth-links a:hover, .left-links a:hover {
+  color: #EA1135; /* Change color on hover */
+}
+
+.right-links a:hover{
+  color:#EA1135 ;
+}
+
+/* Hover effect for dropdown links */
+.submenu a:hover {
+  background-color: #444; /* Change background for dropdown items on hover */
+}
+
+/* Mega menu column links hover effect */
+.mega-column a:hover {
+  background-color: #444; /* Change background on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 28px;
+}
+
+.shopping-button {
+  width: 100%;
+  text-align: center; /* Center align the button */
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  margin-top: 20px; /* Add some space above the button */
+}
+
+.shopping-button button {
+  background-color: #E51937; /* Red background */
+  color: white;
+  border: none;
+  padding: 15px 485px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: background-color 0.3s ease;
+}
+
+.shopping-button button i {
+  margin-right: 10px;
+}
+
+.shopping-button button:hover {
+  background-color: #C1272D; /* Darker red on hover */
+}
+
+
+/* About Styles */
+
+.containers {
+  display: flex;                     /* Use flexbox for layout */
+  justify-content: space-between;    /* Space between items */
+  flex-wrap: wrap;                  /* Allow wrapping if necessary */
+  width: 85%;               /* Max width for container */
+  margin: 0 auto;                   /* Center the container */
+}
+
+h2 {
+  font-size: 18px;                   /* Heading size */
+  color: #fff;                       /* Heading color */
+  margin-bottom: 15px;               /* Space below heading */
+  font-weight: bold;                 /* Bold text */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+.products{
+  margin-left: 20px;
+}
+
+.products a {
+  color: #fff;                   /* Default link color */
+  text-decoration: none;         /* Remove underline */
+  transition: color 0.3s ease;   /* Smooth color transition */
+}
+
+.products a:hover {
+  color: #ff4c4c;                /* Color on hover */
+}
+
+.products ul, .categories ul {
+  padding-left: 0;
+}
+
+.products li, .categories li, .comments .comment {
+  margin-bottom: 10px;  /* Further reduced margin */
+  display: flex;
+  align-items: center;
+}
+
+
+.products li img, .comments .comment img {
+  width: 50px;   /* Further reduced image size */
+  height: 50px;  
+  background-color: #aaa;
+  border-radius: 5px;
+}
+
+.products, .comments {                /* Ensures both sections take equal space */
+  flex: 1;                           /* Allow equal flex growth */
+  min-width: 310px;                  /* Minimum width for responsive behavior */
+  margin: 0 10px;                   /* Margin for separation */
+}
+
+.product-details {
+  margin-left: 8px;  /* Reduced margin */
+}
+
+.price {
+  color: #ff4c4c;
+  font-weight: bold;
+  margin-top: 2px;   /* Reduced margin */
+}
+
+.highlight {
+  color: #ff4c4c;
+  cursor: pointer;
+}
+.contact{
+  margin-left: 20px;
+}
+
+.contact h2 {
+  font-size: 20px;                    /* Adjust the heading size */
+  margin-bottom: 10px;                /* Space below the heading */
+}
+
+.contact p {
+  font-size: 14px;                    /* Adjust the paragraph size */
+  line-height: 1.5;                   /* Improve readability with line height */
+  margin: 5px 0;                      /* Space above and below paragraphs */
+}
+
+.contact-icon {
+  margin-right: 5px;                  /* Space between icon and text */
+}
+
+.contact .social-icons {
+  display: flex;
+  gap: 10px;  /* Reduced gap between social icons */
+  margin-top: 15px;  /* Reduced margin */
+}
+
+.social-icons a img {
+  width: 24px;                        /* Adjust icon size */
+  height: 24px;                       /* Maintain aspect ratio */
+  margin-right: 10px;                 /* Space between icons */
+  transition: color 0.3s ease; 
+}
+
+.social-icons a:hover {
+  color: #ff4c4c;                /* Color on hover */
+}
+
+.comments{
+  margin-left: 20px;
+}
+
+.comments h2 {
+  font-size: 18px;            /* Adjust font size for the title */
+  color: #fff;                /* Title color */
+  margin-bottom: 15px;        /* Spacing below the title */
+}
+
+.comment {
+  display: flex;              /* Flexbox for horizontal alignment */
+  align-items: flex-start;    /* Align items at the start */
+  margin-bottom: 15px;        /* Space between comments */
+}
+
+.comment-text h4 {
+  font-size: 14px;            /* Font size for commenter's name */
+  margin: 0;                  /* Remove default margin */
+}
+
+.comment img {
+  width: 50px;                /* Resize commenter images */
+  height: 50px;               /* Keep images square */
+  border-radius: 50%;         /* Make images circular */
+  margin-right: 10px;         /* Space between image and text */
+}
+
+.comment-text {
+  color: #fff;                /* Text color for comments */
+}
+
+
+.comment-time {
+  font-size: 12px;            /* Font size for time */
+  color: #888;                /* Lighter color for time */
+  margin-bottom: 5px;         /* Space below time */
+}
+
+.comment-message {
+  font-size: 12px;            /* Font size for comment message */
+  color: #a0a3b1;             /* Color for message text */
+}
+
+.categories{
+  margin-left: 20px;
+}
+
+.categories h2 {
+  font-size: 20px;                  /* Heading size */
+  color: #fff;                      /* Heading color */
+  margin-bottom: 10px;              /* Space below heading */
+}
+
+.categories ul {
+  list-style: none;                 /* Remove default list styling */
+  padding: 0;                       /* Remove padding */
+}
+
+.categories li {
+  margin-bottom: 10px;              /* Space between items */
+  border-bottom: 1px solid #333;
+}
+
+.categories a {
+  color: #fff;                      /* Default link color */
+  text-decoration: none;            /* Remove underline */
+  transition: color 0.3s ease;      /* Smooth transition for color change */
+  border-bottom: 2px solid transparent; /* Initial border to keep layout consistent */
+  padding-bottom: 2px;             /* Space between text and border */
+}
+.categories a:hover {
+  color: #ff4c4c;                   /* Color on hover */
+  
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #333;
+  padding-top: 15px;  /* Reduced padding */
+  margin-top: 15px;  /* Reduced margin */
+}
+
+.footer-bottom p {
+  color: #888;
+  font-size: 12px;  /* Adjusted font size */
+}
+
+.footer-links {
+  margin-top: 5px;  /* Reduced margin */
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;  /* Reduced horizontal margin */
+  font-size: 12px;  /* Reduced font size */
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}

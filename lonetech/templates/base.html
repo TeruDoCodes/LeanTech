@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAN TECH - {% block title %} {% endblock %} </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <!-- First Div: Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div class="left-links">
+                <a href="#">Seller Centre</a>  
+                <a href="#">Start Selling</a>  
+                <a href="#">Follow us on</a>
+                <a><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+   <!-- Second Div: Main Header -->
+<div class="main-header">
+    <div class="container main-header-content">
+        <div class="logo-section">
+            <!-- Replace the circle with an image tag -->
+            <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Logo" class="logo-image">
+            <span class="brand-name">LEAN<br> TECH</span>
+        </div>
+        <nav class="nav-links">
+            <a href="/">Home</a>
+            <a href="shop">Shop</a>
+            <a href="about">About</a>
+            <a href="contact">Contact</a>
+        </nav>
+        <div class="auth-links">
+                {% if session['username'] %}
+                    <!-- Display if logged in -->
+                    <div class="dropdown-new">
+                        <button class="dropbtn-new">
+                            <i class="fas fa-user"></i> Welcome, <span id="username" class="username-highlight" >{{ session['username'] }}</span>
+                        </button>
+                        <div class="dropdown-content-new">
+                            <a href="#"><i class="fas fa-cog"></i> Account Settings</a>
+                            <a href="{{ url_for('auth.logout') }}"><i class="fas fa-sign-out-alt"></i> Logout</a>
+                        </div>
+                    </div>                    
+                {% else %}
+                    <!-- Display if not logged in -->
+                    <a href="{{ url_for('auth.relog') }}">Log In / Sign Up</a>
+                {% endif %}
+        </div>
+    </div>
+</div>
+
+    <!-- Scripts -->
+    <script>
+        window.onload = function() {
+            document.querySelector('.dropbtn-new').addEventListener('click', function () {
+                document.querySelector('.dropdown-content-new').classList.toggle('show');
+            });
+    
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn-new')) {
+                    const dropdowns = document.getElementsByClassName("dropdown-content-new");
+                    for (let i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.classList.contains('show')) {
+                            openDropdown.classList.remove('show');
+                        }
+                    }
+                }
+            };
+        };
+    </script>    
+    
+    {% if session['username'] %}
+    <div id="username-container" data-username="{{ session['username'] }}">
+        <span id="username"></span>
+    </div>
+    
+    <script>
+        window.onload = function() {
+            // Get the username from the data attribute and update the DOM
+            const username = document.getElementById('username-container').getAttribute('data-username');
+            document.getElementById('username').textContent = username;
+        };
+    </script>
+    {% endif %}
+    
+
+
+<section id="home">
+    <!-- Search Section -->
+    <div class="search-section">
+        <!-- Left Side: Dropdowns -->
+        <div class="dropdowns">
+            <div class="dropdown">
+                <button class="dropbtn">Categories <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                    <!-- Submenu for Mobile Phones -->
+                    <div class="submenu">
+                        <a href="#">Mobile Phones <i class="fas fa-chevron-right"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-column">
+                                <ul>
+                                    <li class="category-heading">Mobile Phones</li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">Apple</a></li>
+                                    <li><a href="#">Xiaomi</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <ul>
+                                    <li class="category-heading">Televisions</li>
+                                    <li><a href="#">Sony</a></li>
+                                    <li><a href="#">LG</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <ul>
+                                    <li class="category-heading">Laptops</li>
+                                    <li><a href="#">Dell</a></li>
+                                    <li><a href="#">HP</a></li>
+                                    <li><a href="#">Lenovo</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submenu for Home Appliances -->
+                    <div class="submenu">
+                        <a href="#">Home Appliances <i class="fas fa-chevron-right"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-column">
+                                <ul>
+                                    <li class="category-heading">Refrigerators</li>
+                                    <li><a href="#">Samsung</a></li>
+                                    <li><a href="#">LG</a></li>
+                                    <li><a href="#">Whirlpool</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <ul>
+                                    <li class="category-heading">Washing Machines</li>
+                                    <li><a href="#">Bosch</a></li>
+                                    <li><a href="#">LG</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-column">
+                                <ul>
+                                    <li class="category-heading">Microwaves</li>
+                                    <li><a href="#">Panasonic</a></li>
+                                    <li><a href="#">LG</a></li>
+                                    <li><a href="#">Samsung</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">Brand <i class="fas fa-chevron-down"></i></button>
+                <div class="dropdown-content">
+                  <div class="submenu">
+                    <a href="#">Mobile Phones <i class="fas fa-chevron-right"></i></a>
+                    <div class="mega-menu">
+                        <div class="mega-column">
+                            <ul>
+                                <li class="category-heading">Mobile Phones</li>
+                                <li><a href="#">Samsung</a></li>
+                                <li><a href="#">Apple</a></li>
+                                <li><a href="#">Xiaomi</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <ul>
+                                <li class="category-heading">Televisions</li>
+                                <li><a href="#">Sony</a></li>
+                                <li><a href="#">LG</a></li>
+                                <li><a href="#">Samsung</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-column">
+                            <ul>
+                                <li class="category-heading">Laptops</li>
+                                <li><a href="#">Dell</a></li>
+                                <li><a href="#">HP</a></li>
+                                <li><a href="#">Lenovo</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Center: Search Bar -->
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search anything...">
+        </div>
+
+        <!-- Right Side: Icons -->
+        <div class="icons">
+            <a href="#" class="icon-heart"><i class="far fa-heart"></i></a>
+            <a href="#" class="icon-cart">
+            <i class="fas fa-shopping-bag"></i>
+            </a>
+        </div>
+    </div>
+</section>
+<!--End Of Home Page-->
+
+{% block body %}
+
+
+{% endblock %}
+
+<!--About Page-->
+  
+<footer id="contact">
+    <div class="containers">
+        <!-- Products Section -->
+        <div class="products">
+            <h2>Products</h2>
+            <ul>
+                <li>
+                    <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                    <div class="product-details">
+                        <a href="product1.html"> <!-- Link to the product page -->
+                            <span>Chuwi Z8350 Lapbook Quad Core 3.2GHz 15.6" IPS</span>
+                        </a>
+                        <div class="price">$199.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                    <div class="product-details">
+                        <a href="product2.html"> <!-- Link to the product page -->
+                            <span>Jumper 10.5" Tablet 8GB RAM 64GB RAM with Windows 10</span>
+                        </a>
+                        <div class="price">$149.95</div>
+                    </div>
+                </li>
+                <li>
+                    <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                    <div class="product-details">
+                        <a href="product3.html"> <!-- Link to the product page -->
+                            <span>Doogee X10 Lite 5.5" Smart Phone</span>
+                        </a>
+                        <div class="price">$64.55</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+
+        <!-- Contact Section -->
+        <div class="contact">
+            <h2>Keep in Touch</h2>
+            <p><span class="contact-icon"><i class="fas fa-map-marker-alt"></i></span> Sta Cruz, Laguna, Philippines</p>
+            <p><span class="contact-icon"><i class="fas fa-phone-alt"></i></span> 1800 452 308</p>
+            <p><span class="contact-icon"><i class="fas fa-phone-alt"></i></span> +61 (8) 8234 3555</p>
+            <p><span class="contact-icon"><i class="fas fa-envelope"></i></span> lone@lonetech.com</p>
+            <p><span class="contact-icon"><i class="fas fa-link"></i></span> www.lonetechapp.com</p>
+
+            <div class="social-icons">
+                <a href="#"><span><img src="{{ url_for('static', filename='img/fb.png')}}" alt="Facebook"></span></a>
+                <a href="#"><span><img src="{{ url_for('static', filename='img/instagram_32px.png')}}" alt="Instagram"></span></a>
+                <a href="#"><span><img src="{{ url_for('static', filename='img/twitter.png')}}" alt="Twitter"></span></a>
+                <a href="#"><span><img src="{{ url_for('static', filename='img/pinterest.png')}}" alt="Pinterest"></span></a>
+                <a href="#"><span><img src="{{ url_for('static', filename='img/yt.png')}}" alt="YouTube"></span></a>
+            </div>
+            
+        </div>
+
+        <!-- Categories Section -->
+        <div class="categories">
+            <h2>Product Categories</h2>
+            <ul>
+                <li><a href="#">Notebooks, Laptops</a></li>
+                <li><a href="#">Tablets</a></li>
+                <li><a href="#">Smart Phones</a></li>
+                <li><a href="#">Virtual Reality</a></li>
+                <li><a href="#">Smart Watches</a></li>
+                <li><a href="#">Accessories</a></li>
+            </ul>
+        </div>
+        
+
+        <!-- Comments Section -->
+        <div class="comments">
+            <h2>Latest Comments</h2>
+            <div class="comment">
+                <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Commenter Image">
+                <div class="comment-text">
+                    <h4>Marta Williams</h4>
+                    <div class="comment-time">5 days ago</div>
+                    <div class="comment-message">Quis autem vel eum iure repreh qui in ea voluptate velit esse quam nihil.</div>
+                </div>
+            </div>
+            <div class="comment">
+                <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Commenter Image">
+                <div class="comment-text">
+                    <h4>Gary Gunnarsson</h4>
+                    <div class="comment-time">6 days ago</div>
+                    <div class="comment-message">Molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</div>
+                </div>
+            </div>
+        </div>
+    </div>     
+
+<!-- Footer Bottom Section -->
+<footer>
+    <div class="footer-bottom">
+        <p>&copy; Copyright 2024 Lone Tech Mart</p>
+            <div class="footer-links">
+                <a href="#">Shipping & Return</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+            </div>
+        </div>
+</footer>
+</body>
+</html>

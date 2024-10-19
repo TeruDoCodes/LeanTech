@@ -1,0 +1,534 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    background-color: #232935;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 80%; /* Adjusted to match the second image */
+    margin: 0 auto;
+    display: flex;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    
+}
+
+  /* Title styling */
+  h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+    
+  }
+
+.sidebar-container {
+    display: flex;
+    justify-content: center;
+    width: 25%; /* Adjust sidebar width as needed */
+    padding: 20px; /* Add padding to the sides for space */
+  }
+
+  .sidebar {
+    
+    color: #fff;
+    width: 300px; /* Sidebar width */
+    padding: 20px;
+    height: 100vh; /* Full height */
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Space between sections */
+  }
+
+  /* Common heading styling */
+  .sidebar h3 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  /* Price Filter */
+  .price-filter input {
+    width: 100%;
+  }
+
+  .price-range {
+    color: #ccc;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  /* Categories */
+  .categories ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .categories li {
+    margin-right:20px;
+    
+    color: #ccc;
+    cursor: pointer;
+  }
+
+  .categories li:hover {
+    color: #ff4b4b;
+  }
+
+  /* Featured Products */
+  .featured-products .product {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  .product img {
+    width: 50px;
+    height: 50px;
+    background-color: #888; /* Placeholder color */
+    margin-right: 10px;
+  }
+
+  .product-details {
+    color: #fff;
+  }
+
+  .product-details .price {
+    color: #ff4b4b;
+    font-weight: bold;
+  }
+
+  /* Shop by Brand */
+  .brands ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .brands li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .brands input[type="checkbox"] {
+    margin-right: 10px;
+  }
+
+  /* Filter by Color */
+  .colors {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .color-circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    cursor: pointer;
+  }
+
+  /* Filter by Size */
+  .sizes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+    margin-top: 10px;
+  }
+
+  .size-btn {
+    background-color: #232935;
+    border: 2px solid #444;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+
+  }
+
+  .size-btn.active {
+    background-color: #ff4b4b;
+  }
+
+  .right-container {
+    width: 66%;
+    color: white;
+    max-width: 1200px;
+    margin: 0px;
+    padding: 20px;
+    
+  }
+
+ /* Header Styling */
+ .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #b8b8b8;
+    font-size: 14px;
+}
+
+.header-left {
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Select Box Styling */
+.header-right select {
+    background-color: #424242;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.header-right select:focus {
+    outline: none;
+
+}
+
+.product-container {
+    display: none;
+}
+
+.product-container.active {
+    display: block;
+}
+
+/* Show Options Styling */
+.header-right .show-options {
+    color: #b8b8b8;
+    font-size: 14px;
+    display: inline-flex;
+    gap: 10px;
+}
+
+.header-right .show-options a {
+    color: #b8b8b8;
+    text-decoration: none;
+}
+
+.header-right .show-options a:hover,
+.header-right .show-options a.active {
+    color: #ff5e57;
+    font-weight: bold;
+}
+
+/* View Options Styling */
+.view-options {
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.view-options a {
+    color: #b8b8b8;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.view-options a:hover,
+.view-options a.active {
+    background-color: #ff5e57;
+    color: #ffffff;
+}
+
+.view-options a .fa-th-list {
+    font-size: 18px;
+}
+
+.view-options a .fa-th {
+    font-size: 18px;
+}
+
+/* Tooltip Styling */
+.view-options a[title]:hover::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 100;
+}
+
+  /* Product Grid */
+  .product-grid {
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px; /* Space between items */
+  }
+
+  .grid-2x2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3x3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4x4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+  /* Product Card */
+  .product-card {
+    border-radius: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover {
+    transform: translateY(-10px);
+}
+
+  .product-card img {
+    width: 100%;
+    height: 200px;
+    background-color: #555; /* Placeholder for image */
+    border-radius: 10px;
+  }
+
+ /* Default grid view */
+.grid-view .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Default product card styling for grid view */
+.grid-view .product-card {
+    background-color: #2d2d2d;
+    padding: 20px;
+    text-align: center;
+}
+
+/* List view layout */
+.list-view .product-grid {
+    display: block;
+}
+
+.list-view .product-card {
+    display: flex;
+    background-color: #2d2d2d;
+    padding: 20px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.list-view .product-card img {
+    width: 150px;
+    margin-right: 20px;
+}
+
+.list-view .product-info {
+    display: block;
+    text-align: left;
+}
+
+  .product-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 5px;
+}
+
+.product-label.out-of-stock {
+    background-color: #7f8c8d;
+}
+
+.product-label.limited {
+    background-color: #f39c12;
+}
+
+.product-info {
+    margin-top: 15px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.product-category {
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+.product-price {
+    margin: 10px 0;
+}
+
+.product-price .original {
+    text-decoration: line-through;
+    color: #b8b8b8;
+    font-size: 14px;
+}
+
+.product-price .discounted {
+    color: #ff5e57;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.product-actions {
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.product-actions button {
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    background-color: #232935;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.product-actions button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+.product-actions button:hover {
+    background-color: #3ac569;
+}
+
+.product-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.product-icons i {
+    font-size: 20px;
+    color: #b8b8b8;
+    transition: color 0.3s;
+    cursor: pointer;
+}
+
+.product-icons i:hover {
+    color: #ff5e57;
+}
+
+/* Quick View Tooltip */
+.product-actions .quick-view {
+    position: relative;
+}
+
+.product-actions .quick-view:hover:after {
+    content: "Quick View";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.containers {
+    display: flex;                     
+    justify-content: space-between;    
+    flex-wrap: wrap;                  
+    width: 85%;               
+    margin: 0 auto;             
+    margin-top: 500px;      
+  }
+  
+.categories h2 {
+    font-size: 18px;                   /* Heading size */
+    color: #fff;                       /* Heading color */
+    margin-bottom: 15px;               /* Space below heading */
+    font-weight: bold;                 /* Bold text */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.product-details {
+    margin-left: 8px;  /* Reduced margin */
+}
+
+.price {
+    color: #E51937;
+    font-weight: bold;
+    margin-top: 2px;   /* Reduced margin */
+}
+
+
+
+.categories{
+    margin-left: 20px;
+}
+
+.categories h2 {
+    font-size: 20px;                  /* Heading size */
+    color: #fff;                      /* Heading color */
+    margin-bottom: 10px;              /* Space below heading */
+}
+
+.categories ul {
+    list-style: none;                 /* Remove default list styling */
+    padding: 0;                       /* Remove padding */
+}
+
+.categories li {
+    margin-bottom: 10px;              /* Space between items */
+    border-bottom: 1px solid #333;
+}
+
+.categories a {
+    color: #fff;                      /* Default link color */
+    text-decoration: none;            /* Remove underline */
+    transition: color 0.3s ease;      /* Smooth transition for color change */
+    border-bottom: 2px solid transparent; /* Initial border to keep layout consistent */
+    padding-bottom: 2px;             /* Space between text and border */
+}
+.categories a:hover {
+    color: #ff4c4c;                   /* Color on hover */
+    
+}

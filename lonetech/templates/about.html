@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %} About {% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="{{ url_for('static', filename='js/star2.js') }}"></script>
+</head>
+<body>
+<section id="about">
+
+    <!--Page-->
+    <section class="about-store">
+        <div class="content-wrapper">
+        <div class="text-content">
+        <h1>About Our Store</h1>
+            
+        <p><strong>We started in <span class="highlight">2024</span> as a group of students with a shared passion for e-commerce and innovation.</strong></p>
+        <span class="highlight2"><p>We started in 2023 as a group of students with a shared passion for e-commerce and innovation. This project began as part of our coursework, but quickly turned into something we’re excited to present. We’ve learned a lot about building an online store from scratch, from product listings to user experience. Our goal is to showcase not just what we’ve learned, but also the potential of e-commerce to bring people together through accessible and easy-to-use platforms.</p>
+        <p>Though this is a class project, we’ve treated it as a real-world challenge, and we’re proud of what we’ve built. Thank you for checking out our work, and we hope it reflects our creativity, teamwork, and ambition to one day turn these skills into something bigger.</p></span>
+        </div>
+        <div class="image-placeholder">
+        <!-- Placeholder image -->
+        <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Store Image">
+        </div>
+        </div>
+    </section>
+
+
+    <section class="customer-feedback">
+        <div class="feedback-wrapper">
+        <div class="feedback-text left">
+        <h2>What our Customers</h2>
+        </div>
+    
+        <div class="feedback-icon">
+        <a href="#"><img src="{{ url_for('static', filename='img/deatil.png')}}" alt="Feedback Icon"></a>
+        </div>
+    
+        <div class="feedback-text right">
+            <h2>says about our Store</h2>
+        </div>
+        </div>
+    </section>
+
+
+    <section class="reviews-section">
+        <div class="review-card">
+        <div class="circle-image">
+            <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="User Photo">
+        </div>
+        <h3>Prince Gian Mortega</h3>
+        <p>Tangina super accommodating, at mapag mahal nila.</p>
+        <div class="star-rating" data-rating="5">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        </div>
+    
+        <div class="review-card">
+        <div class="circle-image">
+        <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="User Photo">
+        </div>
+        <h3>Maxine Ramos</h3>
+        <p>Tangina super accommodating, at mapag mahal nila.</p>
+        <div class="star-rating" data-rating="4">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+    </div>
+    
+        <div class="review-card">
+        <div class="circle-image">
+            <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="User Photo">
+        </div>
+        <h3>Leo Largrosa</h3>
+        <p>Tangina super accommodating, at mapag mahal nila.</p>
+        <div class="star-rating" data-rating="5">
+            <span class="star" data-value="1">&#9733;</span>
+            <span class="star" data-value="2">&#9733;</span>
+            <span class="star" data-value="3">&#9733;</span>
+            <span class="star" data-value="4">&#9733;</span>
+            <span class="star" data-value="5">&#9733;</span>
+        </div>
+        </div>
+
+    </section>
+
+    <section class="shopping-banner">
+        <div class="banner-content">
+            <a href="shop" class="shopping-button">
+                <i class="fas fa-shopping-bag"></i> LET'S GO SHOPPING
+            </a>
+        </div>
+    </section>    
+    
+</section>
+
+</body>
+</html>
+
+{% endblock %}

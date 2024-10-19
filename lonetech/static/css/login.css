@@ -1,0 +1,268 @@
+/* Resetting margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    background-color: #232935;
+    scroll-behavior: smooth;
+  }
+   
+  .header .user-options {
+    color: white;
+}
+
+.header {
+    background-color: #232935;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+  
+.header h1 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+
+/* Main container holding both forms */
+.containerz {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    max-width: 1000px; /* Set a max width for the container */
+    margin: auto;
+}
+
+/* Style for each form box */
+    .form-box {
+        
+        padding: 40px;
+        border-radius: 8px;
+        width: 380px; /* Set the same width for both forms */
+        margin: 0 15px; /* Spacing between the two forms */
+    }
+
+/* Border separator for the left and right forms */
+.sign-in-box {
+    border-right: 1px solid #444b5e; /* Border on the right for sign-in */
+    background: #3b4252;
+}
+
+.register-box {
+    
+    background: #232935;
+}
+
+/* Header section for form titles and icons */
+.form-header {
+    display: flex; /* Use flexbox */
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+.header-icon {
+    font-size: 25px; /* Set icon size */
+    color: #E51937; /* Red icon color */
+    margin-left: 15px; /* Increase space between text and icon */
+}
+
+.form-header h2 {
+    color: #ffffff; /* Header text color */
+    font-size: 22px; /* Header text size */
+    margin: 0; /* Remove default margin for proper alignment */
+}
+
+
+.description {
+    color: #b0b4c2;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* Styling for form content area */
+.form-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Input wrapper to position icons inside input fields */
+.input-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #b0b4c2;
+    font-size: 18px;
+}
+
+/* Input field styling */
+.input-field {
+    width: calc(100% - 1px); /* Adjusted width to match container and spacing */
+    padding: 12px 15px 12px 45px; /* Ensure left padding is enough to accommodate icons */
+    background: #444c5c;
+    border: 1px solid #5b6277;
+    border-radius: 6px;
+    color: #ffffff;
+    font-size: 15px;
+    box-sizing: border-box; /* Prevents the field from exceeding its container */
+}
+
+.input-field::placeholder {
+    color: #b0b4c2;
+}
+
+.input-wrapper {
+    position: relative; /* Position for input icon */
+    margin-bottom: 15px; /* Space between inputs */
+}
+
+.input-field1 {
+  width: calc(100% - 1px); /* Adjusted width to match container and spacing */
+  padding: 12px 15px 12px 45px; /* Ensure left padding is enough to accommodate icons */
+  background: #232935;
+  border: 1px solid #5b6277;
+  border-radius: 6px;
+  color: #ffffff;
+  font-size: 15px;
+  box-sizing: border-box; /* Prevents the field from exceeding its container */
+}
+
+.input-field1::placeholder {
+  color: #b0b4c2;
+}
+
+.toggle-password {
+    position: absolute; /* Position the toggle button */
+    right: 15px; /* Align to the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+    cursor: pointer; /* Change cursor on hover */
+    color: #b0b4c2; /* Color of the eye icon */
+    font-size: 18px; /* Size of the eye icon */
+}
+
+/* Options like 'Remember me' and 'Forgot password' */
+.options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.options label {
+    color: #b0b4c2;
+}
+
+.options .forgot-password {
+    color: #b0b4c2;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* Submit button styling */
+.submit-btn {
+    background: #E51937;
+    color: #ffffff;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background: #c0392b;
+}
+
+/* Social login section */
+.social-section {
+    margin-top: 25px;
+}
+
+.social-text {
+    color: #b0b4c2;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-btn {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    border-radius: 50%;
+    background: #4a536e;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #989aa0;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.social-btn:hover {
+    background: #5b6277;
+}
+
+.social-btn1 {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  border-radius: 50%;
+  background: #232935;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #5b6277;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.social-btn1:hover {
+  background: #333;
+}
+
+.flash-message {
+    padding: 5px;
+    border-radius: 5px;
+    color: white; /* Text color for error messages */
+    border-radius: 5px;
+    margin: 15px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    animation: fadeOut 5s forwards; /* Fade out animation */
+}
+
+.flash-message.success {
+    background-color: green; /* Background color for success messages */
+}
+
+.flash-message.error {
+    background-color: red; /* Background color for error messages */
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+

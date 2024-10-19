@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact {% endblock %}
+
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css')}}">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Lone Tech</title>
+</head>
+<body>
+
+<!--Contact Page-->
+
+<div class="faq-section">
+    <div class="contact-sections">
+        <!-- General Contact Section -->
+        <div class="contact-card">
+            <h2>General Contact</h2>
+            <div class="contact-info">
+                <i class="fas fa-phone"></i> 
+                <span>405 423 2211</span>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> 
+                <span>LoneMart@gmail.com</span>
+            </div>
+        </div>
+        
+        <!-- Reseller Enquiries Section -->
+        <div class="contact-card">
+            <h2>Reseller Enquiries</h2>
+            <div class="contact-info">
+                <i class="fas fa-mobile-alt"></i> 
+                <span>0921 637 4239</span>
+            </div>
+            <div class="contact-info">
+                <i class="fas fa-envelope"></i> 
+                <span>LoneMart@gmail.com</span>
+            </div>
+        </div>
+        
+        <!-- Social Media Section -->
+        <div class="social-media">
+            <h2>Follow us @LoneMart</h2>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="contact-section">
+    <!-- Left About Section -->
+    <div class="about-section">
+        <h2>About LoneMarket</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur dasdasasasdasdsa adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip dasdddddddddd ex ea commodo.</p>
+        <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
+    </div>
+
+
+    <!-- Right Form Section -->
+    <div class="form-section">
+        <div class="form-row">
+            <input type="text" placeholder="Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="text" placeholder="Subject" />
+        </div>
+
+        <div class="form-row">
+            <textarea class="full-width" rows="5" placeholder="Message"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="submit-button">Send Message</button>
+
+        <!-- Checkbox and Label -->
+        <div class="checkbox-row">
+            <input type="checkbox" id="request-recall">
+            <label for="request-recall">I would like to request a recall as well</label>
+        </div>
+    </div>
+</div>
+
+
+<section class="shopping-banner">
+    <div class="banner-content">
+        <a href="shop" class="shopping-button">
+            <i class="fas fa-shopping-bag"></i> LET'S GO SHOPPING
+        </a>
+    </div>
+</section>  
+
+</body>
+</html>
+
+{% endblock %}

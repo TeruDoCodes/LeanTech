@@ -1,0 +1,249 @@
+/* Resetting margin and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    background-color: #232935;
+    scroll-behavior: smooth;
+  }
+  
+
+  .faq-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-right: 750px;
+    color: white;
+}
+
+
+
+.contact-sections {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+    padding: 0 100px;
+}
+.contact-sections h2{
+    color: white;
+}
+
+.contact-card, .social-media {
+    width: 30%;
+    text-align: center;
+}
+
+.contact-card h2, .social-media h2 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+/* Centered underline styling */
+.contact-card h2::after, .social-media h2::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background-color: #444;  /* Red underline color */
+    margin: 10px auto 0;
+}
+
+.contact-info {
+    font-size: 16px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info i {
+    font-size: 22px;
+    margin-right: 10px;
+    color: #E51937;  /* Red icon color */
+}
+
+.contact-info span {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 24px;
+}
+
+.social-links a:hover {
+    color: #E51937;
+}
+
+body {
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.contact-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 100px; /* Section Padding */
+}
+
+/* Left Section */
+.about-section {
+    width: 40%; /* Takes 40% width */
+    margin-left: 70px;
+}
+
+.about-section h2 {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Right Form Section */
+.form-section {
+    width: 45%; /* Takes 55% width */
+    background-color: #232935; /* Darker background color */
+    padding: 20px;
+    margin-right: 30px;
+    border-radius: 10px; /* Rounded corners */
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+/* Input Styles */
+.form-row input {
+    width: calc(33.33% - 15px); /* Equal width with spacing */
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #1e1e28;
+    color: #ffffff;
+    outline: none;
+    margin-right: 10px; /* Increase space between fields */
+}
+
+.form-row input:last-child {
+    margin-right: 0; /* Remove right margin for the last item */
+}
+
+/* Text Area Styling */
+.full-width {
+    width: 100%;
+    padding: 15px;
+    background-color: #1e1e28; /* White background for text area */
+    color: #232935; /* Black text color */
+    border: 1px solid #444; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.form-row textarea {
+    resize: none; /* Disable text area resizing */
+    height: 200px; /* Increase height of message box */
+    color:#fff ;
+}
+
+/* Button and Container Styling */
+.button-container {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.submit-button {
+    background-color: #E51937; /* Red Button Color */
+    color: #ffffff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px; /* Space between button and checkbox */
+}
+
+.submit-button:hover {
+    background-color: #d62f2f; /* Darker red on hover */
+}
+
+/* Checkbox and Label Styling */
+.checkbox-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.checkbox-row input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.checkbox-row label {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+.shopping-banner {
+    background-color: #E51937; /* Red background */
+    text-align: center;
+    border-radius: 5px;
+    width: 80%; /* Adjust width for responsive design */
+    padding: 10px 0;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.banner-content {
+    display: inline-block;
+}
+
+.shopping-button {
+    background-color: #E51937; /* Red background matching the banner */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Rounded corners for the button */
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.shopping-button i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 24px; /* Larger icon size */
+}
+
+.shopping-button:focus {
+    outline: none;
+}
+
+
+  

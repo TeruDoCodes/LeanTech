@@ -1,0 +1,840 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block body %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css')}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="{{ url_for('static', filename='js/slide.js')}}" defer></script>
+<script src="{{ url_for('static', filename='js/changetab.js')}}"></script>
+<script src="{{ url_for('static', filename='js/star.js')}}"></script>
+<script src="{{ url_for('static', filename='js/carousel.js')}}" defer></script>
+<script src="{{ url_for('static', filename='js/add.js')}}"></script>
+
+ <!-- Home Section -->
+ <div class="home-section">
+    <!-- Grid Section with Image Boxes -->
+    <div class="large-box">
+      <div class="slideshow-container">
+          <div class="slide">
+              <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Slide 1">
+          </div>
+          <div class="slide">
+              <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Slide 2">
+          </div>
+          <div class="slide">
+              <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Slide 3">
+          </div>
+  
+          <!-- Previous and Next buttons -->
+          <a class="prev1" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next1" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+  
+        <div class="highlight">
+            <a href="#" class="shop-now">Add to Cart <i class="fas fa-chevron-right"></i></a>
+            <a href="#" class="view-now">View Details <img src="{{ url_for('static', filename='img/deatil.png')}}" alt="Icon" class="icon"></a>
+        </div>
+    </div>
+  
+    <!-- Benefits Section -->
+    <div class="benefits-section">
+        <div class="benefit-item">
+            <img src="{{ url_for('static', filename='img/Money Back.png')}}" alt="Money Back">
+            <p>60 days money-back</p>
+            <p class="benefit-description">Lorem ipsum dolor sit amet. Ut perfendis amet cum vero molestias.</p>
+        </div>
+        <div class="benefit-item">
+            <img src="{{ url_for('static', filename='img/Secure.png')}}" alt="Secure Checkout">
+            <p>Secure Checkout</p>
+            <p class="benefit-description">Lorem ipsum dolor sit amet. Ut perfendis amet cum vero molestias.</p>
+        </div>
+        <div class="benefit-item">
+            <img src="{{ url_for('static', filename='img/Friendly support.png')}}" alt="Friendly Support">
+            <p>Friendly Support</p>
+            <p class="benefit-description">Lorem ipsum dolor sit amet. Ut perfendis amet cum vero molestias.</p>
+        </div>
+        <div class="benefit-item">
+            <img src="{{ url_for('static', filename='img/Daily Offer Icon.png')}}" alt="Daily Offers">
+            <p>Daily Offers</p>
+            <p class="benefit-description">Lorem ipsum dolor sit amet. Ut perfendis amet cum vero molestias.</p>
+        </div>
+    </div>  
+  </div>
+  </section>
+  <!--End Of Home Page-->
+  
+  <!--Shop Section-->
+  <section id="best-products">
+      <h2>Find Your Best Product</h2>
+  
+      <!-- Tabs Navigation -->
+      <ul class="tabs">
+          <li onclick="changeTab('sale')">SALE Products</li>
+          <li onclick="changeTab('bestsellers')">Best Sellers</li>
+          <li onclick="changeTab('newitems')">New Items</li>
+          <li onclick="changeTab('popular')">Most Popular</li>
+      </ul>
+  
+      <!-- Sale Products Container -->
+      <div id="sale" class="product-container active">
+          <div class="carousel-container">
+              <div class="product-carousel">
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button> 
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Add product cards here for Sale Products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Sale Products</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  
+              </div>
+              <button class="prev" onclick="changeSlide('sale',-1)">&#10094;</button>
+              <button class="next" onclick="changeSlide('sale',1)">&#10095;</button>
+          </div>
+      </div>
+  
+      <!-- Best Sellers Container -->
+      <div id="bestsellers" class="product-container">
+          <div class="carousel-container">
+              <div class="product-carousel">
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Best Sellers</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  
+              </div>
+              <button class="prev" onclick="changeSlide('bestsellers', -1)">&#10094;</button>
+              <button class="next" onclick="changeSlide('bestsellers', 1)">&#10095;</button>
+          </div>
+      </div>
+  
+      <!-- Additional product containers for new items and popular -->
+      <div id="newitems" class="product-container">
+          <div class="carousel-container">
+              <div class="product-carousel">
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">New Items</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">New Items</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">New Items</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">New Items</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">New Items</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+              </div>
+              <button class="prev" onclick="changeSlide('newitems',-1)">&#10094;</button>
+              <button class="next" onclick="changeSlide('newitems',1)">&#10095;</button>
+          </div>
+      </div>
+  
+      <div id="popular" class="product-container">
+          <div class="carousel-container">
+              <div class="product-carousel">
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Popular</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Popular</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Popular</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Popular</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+  
+                  <div class="product-card" data-index="0">
+                      <div class="product-image">
+                          <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Product Image">
+                          <div class="product-actions">
+                              <button class="add-to-cart">Add to Cart</button>
+                              <button class="wishlist"><i class="far fa-heart"></i></button>  
+                              <button class="quick-view"><i class="fas fa-eye"></i></button>
+                          </div>
+                      </div>
+                      <div class="product-info">
+                          <div class="rating">
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9733;</span>
+                              <span class="star">&#9734;</span>
+                          </div>
+                          <p class="category">Popular</p>
+                          <p class="description">Lorem ipsum dolor sit amet, est voluptas est laboriosam quia et...</p>
+                      </div>
+                  </div>
+                  <!-- Repeat product-card for other Best Seller products -->
+              </div>
+              <button class="prev" onclick="changeSlide('popular',-1)">&#10094;</button>
+              <button class="next" onclick="changeSlide('popular',1)">&#10095;</button>
+  
+          </div>
+      </div>
+  
+      <div class="shop-button">
+          <a href="shop">Go to Shop<i class="fas fa-chevron-right"></i></a>
+      </div>
+  </section>
+  
+      
+  <div class="category-grid">
+      <a href="#" class="category-item">
+        <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Notebooks, Laptops">
+        <span>Notebooks, Laptops</span>
+      </a>
+      <a href="#" class="category-item">
+        <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Tablets">
+        <span>Tablets</span>
+      </a>
+      <a href="#" class="category-item">
+        <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Smart Phones">
+        <span>Smart Phones</span>
+      </a>
+      <a href="#" class="category-item">
+        <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Accessories">
+        <span>Accessories</span>
+      </a>
+      <a href="#" class="category-item">
+        <img src="{{ url_for('static', filename='img/IMG_2972.JPG')}}" alt="Components">
+        <span>Components</span>
+      </a>
+    </div>
+    
+  
+    <div class="shopping-button">
+        <a href="shop">
+      <button><i class="fas fa-shopping-bag"></i> LET'S GO SHOPPING</button>
+        </a>
+    </div>
+        
+          
+  <!--End Of Shop Page-->
+  
+  
+{% endblock %}  

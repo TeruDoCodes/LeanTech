@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+
+{% block title %} My Account {% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/showpass.js')}}" defer></script>
+    <title>Lone Tech</title>
+</head>
+<body>
+
+    <div class="header">
+        <div class="user-options">
+            <h1>My Account</h1>
+        </div>
+    </div>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div class="flash-messages">
+            {% for category, message in messages %}
+                <div class="flash-message {{ category }}">{{ message }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% endwith %}
+
+
+
+    <div class="containerz">
+        <!-- Sign In Form -->
+        <div class="form-box sign-in-box">
+            <div class="form-header">
+                <i class="fas fa-lock header-icon"></i>
+                <h2>Sign in to your Account</h2>
+            </div>
+            <p class="description">Log in to your account to discover all awesome products.</p>
+            <div class="form-content">
+                <form method="POST" id="Login">
+                    <input type="hidden" name="form_id" value="Login">
+                    <div class="input-wrapper">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="email" class="input-field" name="email" placeholder="Email address" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" class="input-field" name="password" id="password" placeholder="Password" required>
+                        <span class="toggle-password" id="toggle-password">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <div class="options">
+                        <label><input type="checkbox"> Remember me?</label>
+                        <a href="#" class="forgot-password">Forgot your password?</a>
+                    </div>
+                    <button class="submit-btn">Sign in</button>
+                    <div class="social-section">
+                        <p class="social-text">or login with:</p>
+                        <div class="social-icons">
+                            <div class="social-btn"><i class="fab fa-facebook-f"></i></div>
+                            <div class="social-btn"><i class="fab fa-twitter"></i></div>
+                            <div class="social-btn"><i class="fab fa-google"></i></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    
+        <!-- Register Form -->
+        <div class="form-box register-box">
+            <div class="form-header">
+                <i class="fas fa-user-plus header-icon"></i>
+                <h2>Not registered? Create now!</h2>
+            </div>
+            <p class="description">Log in to your account to discover all awesome products. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <div class="form-content">
+                <form method="POST" id="Register">
+                    <input type="hidden" name="form_id" value="Register">
+                    <div class="input-wrapper">
+                        <i class="fas fa-user input-icon"></i>
+                        <input type="text" class="input-field1" name="username" placeholder="Username" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-envelope input-icon"></i>
+                        <input type="email" class="input-field1" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-wrapper">
+                        <i class="fas fa-lock input-icon"></i>
+                        <input type="password" class="input-field1" name="password" id="register-password" placeholder="Password" required>
+                        <span class="toggle-password" id="toggle-register-password">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <button class="submit-btn">Sign up</button>
+                    <div class="social-section">
+                        <p class="social-text">or sign up with:</p>
+                        <div class="social-icons">
+                            <div class="social-btn1"><i class="fab fa-facebook-f"></i></div>
+                            <div class="social-btn1"><i class="fab fa-twitter"></i></div>
+                            <div class="social-btn1"><i class="fab fa-google"></i></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

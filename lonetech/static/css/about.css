@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif; /* Apply Raleway font to the body */
+    background-color: #232935;
+    scroll-behavior: smooth;
+  }
+  
+  /* Page section */
+
+  .about-store {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .text-content {
+    flex: 1.5;
+  }
+  
+  .text-content nav {
+    margin-bottom: 10px;
+  }
+  
+  .text-content h1 {
+    font-size: 2rem;
+    margin-bottom: 0px;
+    color: white;
+  }
+
+  .text-content strong {
+    color: white;
+  }
+  
+  .text-content p {
+    margin-bottom: 20px;
+    
+    
+  }
+
+
+  .text-content nav a {
+    color: #ececec;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+  }
+  
+  .text-content nav a:hover {
+    text-decoration: none;
+    color:#EA1135 ;
+  }
+  
+  .highlight {
+    color: #EA1135;
+  }
+  .highlight2 
+  {
+    
+    color: rgb(177, 175, 175);
+  }
+  
+  .image-placeholder {
+    flex: 1;
+    background-color: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .image-placeholder img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .customer-feedback {
+    padding: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .feedback-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feedback-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap;
+    margin: 0 40px;
+    color: white;
+  }
+  
+  .feedback-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feedback-icon img {
+    width: 50px;
+    height: 50px;
+    margin: 0 20px;
+    display: block;
+  }
+
+  
+  
+  .feedback-icon::before,
+  .feedback-icon::after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 50px;
+  background-color: #ECECEC;
+  }
+
+  .feedback-icon::before {
+    left: -15px;
+  }
+  
+  .feedback-icon::after {
+    right: -15px;
+  }
+
+  /* Review section styling */
+.reviews-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px; /* Space between the cards */
+    width: 80%; /* Set the width of the entire section */
+    margin: 100px auto; /* Center the section horizontally with a margin */
+    justify-items: center; /* Center the individual cards */
+}
+
+/* Review card styling */
+.review-card {
+    background-color: #E51937;
+    border-radius: 10px;
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Circle image at the top */
+.circle-image {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    background-color: #ECECEC;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #E51937; /* Red border to match the card */
+}
+
+.circle-image img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Text inside the review card */
+.review-card h3 {
+    margin-top: 60px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.review-card p {
+    font-size: 0.9rem;
+    margin: 10px 0;
+    color: white;
+}
+
+/* Star rating */
+.star-rating {
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 1.5rem;
+    color: #FFD700;
+    cursor: pointer;
+}
+
+.star.unfilled {
+    color: #B3B3B3;
+}
+.shopping-banner {
+    background-color: #E51937; /* Red background */
+    text-align: center;
+    border-radius: 5px;
+    width: 80%; /* Adjust width for responsive design */
+    padding: 10px 0px;
+    margin: 0 auto; /* Center horizontally */
+}
+
+.banner-content {
+    display: inline-block;
+}
+
+.shopping-button {
+    background-color: #E51937; /* Red background matching the banner */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px; /* Rounded corners for the button */
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.shopping-button i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 24px; /* Larger icon size */
+}
+
+
+
+.shopping-button:focus {
+    outline: none;
+}
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+.highlight {
+  color: #E51937;
+  cursor: pointer;
+}
+
